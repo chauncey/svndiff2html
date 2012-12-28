@@ -11,7 +11,7 @@ from pygments.formatters import HtmlFormatter
 
 
 def main(tmpfile):
-    '''Commandline usage
+    '''For commandline usage
     $ svndiff2html.py mydiff_file'''
     f = open(tmpfile,'r')
     mydiff = f.read()
@@ -21,12 +21,13 @@ def main(tmpfile):
     write(page)
 
 def highlight_diff(fd):
-    '''Parse the diff and create html string'''
+    '''Parse the diff, create html string, and return the diff'''
     htmldiff = highlight(fd, DiffLexer(), HtmlFormatter(linenos=True))
     return htmldiff
 
 def create_page(diff, title='Svn demo diff'):
-    '''Take a html diff string and create a full page'''
+    '''Take a html diff string and create a complete page
+    and returns it'''
     env = jinja2.Environment(loader=jinja2.FileSystemLoader('./', encoding='utf-8'))
     template = env.get_template('svndiff2html.tpl')
     return template.render({'title': title
@@ -34,9 +35,9 @@ def create_page(diff, title='Svn demo diff'):
                             , 'styles': ['svndiff2html.css']
                             , 'diff': diff})
 
-def create_css():
+def create_css(outfile='svndiff2html.css'):
     '''Create css file'''
-    f = open('svndiff2html_new.css', 'w')
+    f = open(outfile, 'w')
     f.write(HtmlFormatter().get_style_defs('.highlight'))
     f.close()
 
