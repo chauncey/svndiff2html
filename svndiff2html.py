@@ -25,7 +25,7 @@ def highlight_diff(fd):
     htmldiff = highlight(fd, DiffLexer(), HtmlFormatter(linenos=True))
     return htmldiff
 
-def create_page(diff, title='Svn demo diff'):
+def create_page(diff, title='Svn diff'):
     '''Take a html diff string and create a complete page
     and returns it'''
     env = jinja2.Environment(loader=jinja2.FileSystemLoader('./', encoding='utf-8'))
@@ -37,13 +37,13 @@ def create_page(diff, title='Svn demo diff'):
 
 def create_css(outfile='svndiff2html.css'):
     '''Create css file'''
-    f = open(outfile, 'w')
+    f = open('svndiff2html.css', 'w')
     f.write(HtmlFormatter().get_style_defs('.highlight'))
     f.close()
 
 def write(diff, outfile='diff.html'):
     '''Write the diff out to a file'''
-    f = open(outfile,'w')
+    f = open(outfile, 'w')
     f.write(diff)
     f.close()
 

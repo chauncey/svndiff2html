@@ -10,9 +10,9 @@
     {% for style in styles %}
     <link rel="stylesheet" href="{{ style }}">
     {% endfor %}
-    <style>
+    <style media="screen" type="text/css">
    .highlight .hll { background-color: #ffffcc }
-    .highlight  { background: #A8A5A5; border-radius: 15px; padding: 1em;}
+    .highlight  { background: #3C3B3D; border-radius: 15px; padding: 1em;}
     .highlight .c { color: #408080; font-style: italic } /* Comment */
     .highlight .err { border: 1px solid #FF0000 } /* Error */
     .highlight .k { color: #008000; font-weight: bold } /* Keyword */
@@ -21,15 +21,15 @@
     .highlight .cp { color: #BC7A00 } /* Comment.Preproc */
     .highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
     .highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
-    .highlight .gd { color: #A00000 } /* Generic.Deleted */
+    .highlight .gd { color: #FA5058} /* Generic.Deleted */
     .highlight .ge { font-style: italic } /* Generic.Emph */
     .highlight .gr { color: #FF0000 } /* Generic.Error */
-    .highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-    .highlight .gi { color: #00A000 } /* Generic.Inserted */
+    .highlight .gh { color: #99ABF2; font-weight: bold } /* Generic.Heading */
+    .highlight .gi { color: #69D669 } /* Generic.Inserted */
     .highlight .go { color: #808080 } /* Generic.Output */
     .highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
     .highlight .gs { font-weight: bold } /* Generic.Strong */
-    .highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+    .highlight .gu { color: #BF96E0; font-weight: bold } /* Generic.Subheading */
     .highlight .gt { color: #0040D0 } /* Generic.Traceback */
     .highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
     .highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
@@ -73,6 +73,9 @@
     .highlight .vg { color: #19177C } /* Name.Variable.Global */
     .highlight .vi { color: #19177C } /* Name.Variable.Instance */
     .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
+    .highlighttable { background: #A8A5A5 }
+    .highlighttable  { background: #3C3B3D }
+    .linenodiv { background: #878484 }
     </style>
 </head>
 <body>
